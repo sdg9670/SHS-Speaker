@@ -207,7 +207,6 @@ class GoogleSTT(Thread):
             if not result.is_final:
                 sys.stdout.write(transcript + overwrite_chars + '\r')
                 sys.stdout.flush()
-
                 num_chars_printed = len(transcript)
             else:
                 self._buff.put(transcript+overwrite_chars)
