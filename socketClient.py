@@ -1,15 +1,17 @@
 import socket
 from threading import Thread
 import queue
+import json
 
 HOST = 'simddong.ga'
 PORT = 9670
 
 
 class SocketClient():
-    def __init__(self):
+    def __init__(self, programs):
         self.sock = None
         self.msg = queue.Queue()
+        self.alarm = programs['alarm']
 
     def rcvMsg(self):
         while True:
@@ -19,11 +21,12 @@ class SocketClient():
             data = data.decode()
             with open('log.txt', 'a') as f:
                 f.write(data)
-            print(data)
             split_data = data.split('\t')
             if split_data[0] == "server":
                 if split_data[1] == "msg":
-                    self.msg.put(split_data[2])
+                    self.msg.put(split_data[2] + '\t' + split_data[3])
+                elif split_data[1] == "getalarm":
+                    self.alarm.setAlarmList(json.loads(split_data[2]))
 
     def getMsg(self):
         return self.msg.get(block=True)
@@ -32,7 +35,7 @@ class SocketClient():
         self.socket.close()
 
     def sndMsg(self, msg):
-        self.sock.send(msg.encode())
+        self.sock.send(('speaker\t'+msg).encode())
 
     def runChat(self):
         self.c_name = '1'
