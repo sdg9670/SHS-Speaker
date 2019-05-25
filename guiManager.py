@@ -1,29 +1,16 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-import sys
-import time
+from ui import mainUi
+from multiprocessing import Process, Pipe
+import ui.mainUi
 
-
-class MainUI(QtWidgets.QWidget):
+class GuiManager():
     def __init__(self):
-        super(MainUI, self).__init__()
-        uic.loadUi('ui/main.ui', self)
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        self.setAnswerText('')
-        self.setQuestionText('')
-
-    def setAnswerText(self, text):
-        msg = '<html><head/><body><p align=\"justify\"><span style=\" font-size:14pt; color:#ffffff;\">' + text + '</span></p></body></html>'
-        self.answer.setText(msg)
-
-    def setQuestionText(self, text):
-        self.question.setText(text)
+        self.main_pc, self.main_cc = Pipe()
+        p = Process(target=ui.mainUi.MainUI, args=(self.main_cc,))
+        p.start()
+        p.join()
 
 
-class guiManager():
-    def __init__(self):
-        app = QtWidgets.QApplication(sys.argv)
-
-        mainui = MainUI()
-        mainui.show()
-
-        sys.exit(app.exec_())
+    def setMainAnswerText(self, text):
+            self.main_pc.send(('setAnswerText\t' + text).encode())
+    def setMainQuestionText(self, text):
+            self.main_pc.send(('setQuestionText\t' + text).encode())s
