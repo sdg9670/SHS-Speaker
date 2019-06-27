@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
 
@@ -117,6 +118,7 @@ class ResumableMicrophoneStream:
 
 class GoogleSTT(Thread):
     def __init__(self):
+        self.pause = False
         Thread.__init__(self)
         self._buff = queue.Queue()
         self.client = speech.SpeechClient()
@@ -149,7 +151,10 @@ class GoogleSTT(Thread):
                 responses = self.client.streaming_recognize(self.streaming_config,
                                                        requests)
                 # Now, put the transcription responses to use.
-                self.listen_print_loop(responses, stream)
+                try:
+                    self.listen_print_loop(responses, stream)
+                except Exception as e:
+                    pass
         self._buff.put(None)
         self.status = False
         
