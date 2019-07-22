@@ -36,7 +36,7 @@ class Main:
         step = 0
         while True:
             # 음성 인식 될때까지 대기 한다.
-            self.guiClient.sndMsg('setMainQuestionText\t' + ' ')
+            self.guiClient.sndMsg('setMainQuestionText\t' + '   ')
             stt = self.gstt.getText()
             if stt is None:
                 continue
@@ -50,6 +50,15 @@ class Main:
                     self.gstt.restartMic()
                     self.guiClient.sndMsg('setMainAnswerText\t' + ' ')
                     step = 1
+                elif step == 0 and ('도와줘 다솜' in stt.strip()):
+                    self.sc.sndMsg('help')
+                    msg = self.sc.getMsg()
+                    msg_sp = msg.split('\t')
+                    print(msg_sp[1])
+                    self.guiClient.sndMsg('setMainAnswerText\t' + msg_sp[1])
+                    self.ntts.play(msg_sp[1])
+                    self.gstt.restartMic()
+                    self.guiClient.sndMsg('setMainAnswerText\t' + ' ')
                 elif step == 1:
                     self.sc.sndMsg('nal\t12345\t' + stt.strip())
                     self.gstt.pauseMic()

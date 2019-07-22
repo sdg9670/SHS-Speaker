@@ -22,7 +22,7 @@ class AlarmProgram(threading.Thread):
         while True:
             now = datetime.now()
             for key, value in self.alarms.items():
-                if datetime.strptime(self.alarms[key]['datetime'], '%Y/%m/%d %H:%M:%S') <= now:
+                if datetime.strptime(self.alarms[key]['datetime'], '%Y-%m-%d %H:%M:%S') <= now:
                     self.alarmOn(key)
                     break;
             time.sleep(30)
