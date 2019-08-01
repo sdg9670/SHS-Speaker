@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a4fee7df-c5fd-46e7-845f-f8f87a50fbaa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/googleSTT.py" beforeDir="false" afterPath="$PROJECT_DIR$/googleSTT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guiClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/guiClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guiManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/guiManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/socketClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/socketClient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/guiManager.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="494">
-              <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+              <caret line="71" column="59" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="59" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
               </folding>
@@ -25,13 +30,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/guiClient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/googleSTT.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="106" column="4" lean-forward="true" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socketClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="475">
+              <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="30" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -39,32 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
-              <folding>
-                <element signature="e#45#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/alarmProgram.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/mainUi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-              <folding>
-                <element signature="e#24#64#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -127,7 +123,6 @@
       <find>pauseMic</find>
       <find>recognizer</find>
       <find>chunk</find>
-      <find>_buff</find>
       <find>self.pause</find>
       <find>listen_print_loop</find>
       <find>decode</find>
@@ -147,6 +142,7 @@
       <find>온도</find>
       <find>hide</find>
       <find>setMainAnswerText</find>
+      <find>_buff</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,25 +155,25 @@
         <option value="$PROJECT_DIR$/naverTTS.py" />
         <option value="$PROJECT_DIR$/alarm.py" />
         <option value="$PROJECT_DIR$/ui/main.py" />
-        <option value="$PROJECT_DIR$/guiClient.py" />
-        <option value="$PROJECT_DIR$/googleSTT.py" />
         <option value="$PROJECT_DIR$/ui/todayUi.py" />
         <option value="$PROJECT_DIR$/ui/tomorrowUi.py" />
         <option value="$PROJECT_DIR$/ui/afterTomorrowUi.py" />
-        <option value="$PROJECT_DIR$/guiManager.py" />
-        <option value="$PROJECT_DIR$/socketClient.py" />
         <option value="$PROJECT_DIR$/ui/mainUi.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/alarmProgram.py" />
+        <option value="$PROJECT_DIR$/googleSTT.py" />
+        <option value="$PROJECT_DIR$/socketClient.py" />
+        <option value="$PROJECT_DIR$/guiClient.py" />
+        <option value="$PROJECT_DIR$/guiManager.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="370" />
-    <option name="y" value="191" />
-    <option name="width" value="1935" />
-    <option name="height" value="1100" />
+    <option name="x" value="304" />
+    <option name="y" value="161" />
+    <option name="width" value="990" />
+    <option name="height" value="534" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -210,13 +206,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sdg9670\OneDrive\Graduation\SHS-Speaker" />
+      <recent name="C:\Users\sdg96\Desktop\졸업작품\SHS-Speaker\ui" />
+      <recent name="C:\Users\sdg96\Desktop\졸업작품\SHS-Speaker" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sdg96\Desktop\졸업작품\SHS-Speaker\ui" />
       <recent name="C:\Users\sdg96\Desktop\졸업작품\SHS-Speaker\ui\image" />
-      <recent name="C:\Users\sdg96\Desktop\졸업작품\SHS-Speaker" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sdg96\Desktop\졸업작품\SHS-Speaker\ui" />
       <recent name="C:\Users\sdg96\Desktop\졸업작품\SHS-Speaker" />
     </key>
   </component>
@@ -336,6 +333,7 @@
       <workItem from="1564541304613" duration="783000" />
       <workItem from="1564556717272" duration="599000" />
       <workItem from="1564577561881" duration="608000" />
+      <workItem from="1564621557201" duration="5415000" />
     </task>
     <task id="LOCAL-00001" summary="스피커 수정">
       <created>1557393649624</created>
@@ -372,11 +370,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563770220847</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="도와줘">
+      <created>1564621583913</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1564621583913</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133253000" />
+    <option name="totallyTimeSpent" value="138668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,10 +393,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18094218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -407,7 +411,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50267667" side_tool="true" weight="0.42809734" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32917964" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="File Transfer" order="13" sideWeight="0.496788" weight="0.19911504" />
+      <window_info anchor="bottom" id="File Transfer" order="13" sideWeight="0.496788" visible="true" weight="0.19911504" />
       <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -499,44 +503,7 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5cf60029104dc3e3/main.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5cf61029108c475d/main.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/BNZ.5cf611a21092047b/main.py" />
-    <entry file="file://$PROJECT_DIR$/googleSTT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="e#95#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/guiClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/guiManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <element signature="e#24#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socketClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alarmProgram.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -581,13 +548,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/googleSTT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="106" column="4" lean-forward="true" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socketClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/guiManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="71" column="59" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="59" />
+          <folding>
+            <element signature="e#24#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
-          <folding>
-            <element signature="e#45#61#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
         </state>
       </provider>
     </entry>

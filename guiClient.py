@@ -15,7 +15,7 @@ class GuiClient():
         self.socket.close()
 
     def sndMsg(self, msg):
-        self.sock.send((msg).encode())
+        self.sock.send((msg + '\r').encode())
 
     def runChat(self):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

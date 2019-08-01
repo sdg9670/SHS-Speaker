@@ -36,9 +36,18 @@ class Main:
         step = 0
         while True:
             # 음성 인식 될때까지 대기 한다.
-            self.guiClient.sndMsg('setMainQuestionText\t' + '   ')
             stt = self.gstt.getText()
             if stt is None:
+                if self.sc.msg.empty() is False:
+                    msg = self.sc.msg.get(block=True)
+                    self.gstt.pauseMic()
+                    msg_sp = msg.split('\t')
+                    print(msg_sp[1])
+                    self.guiClient.sndMsg('setMainAnswerText\t' + msg_sp[1])
+                    self.ntts.play(msg_sp[1])
+                    self.gstt.restartMic()
+                    self.guiClient.sndMsg('setMainAnswerText\t' + ' ')
+                    self.guiClient.sndMsg('setMainQuestionText\t' + ' ')
                 continue
             else:
                 self.guiClient.sndMsg('setMainQuestionText\t' + stt)
@@ -49,6 +58,7 @@ class Main:
                     self.ntts.play('말씀하세요.')
                     self.gstt.restartMic()
                     self.guiClient.sndMsg('setMainAnswerText\t' + ' ')
+                    self.guiClient.sndMsg('setMainQuestionText\t' + ' ')
                     step = 1
                 elif step == 0 and ('도와줘 다솜' in stt.strip()):
                     self.sc.sndMsg('help')
@@ -59,6 +69,7 @@ class Main:
                     self.ntts.play(msg_sp[1])
                     self.gstt.restartMic()
                     self.guiClient.sndMsg('setMainAnswerText\t' + ' ')
+                    self.guiClient.sndMsg('setMainQuestionText\t' + ' ')
                 elif step == 1:
                     self.sc.sndMsg('nal\t12345\t' + stt.strip())
                     self.gstt.pauseMic()
@@ -69,6 +80,7 @@ class Main:
                     self.ntts.play(msg_sp[1])
                     self.gstt.restartMic()
                     self.guiClient.sndMsg('setMainAnswerText\t' + ' ')
+                    self.guiClient.sndMsg('setMainQuestionText\t' + ' ')
                     if msg_sp[0] == 'q':
                         step = 1
                     else:

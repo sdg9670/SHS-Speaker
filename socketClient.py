@@ -16,6 +16,8 @@ class SocketClient():
         self.alarm = programs['alarm']
         self.gui = programs['guiClient']
 
+
+
     def rcvMsg(self):
         long_data = ''
         while True:

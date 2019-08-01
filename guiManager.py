@@ -56,19 +56,23 @@ class Server(threading.Thread):
                             break
                     data = data.decode()
                     print('gui 받음' + data)
-                    data = data.split('\t')
-                    if len(data) == 1:
-                        data.append(' ')
-                    if data[0] == 'setMainAnswerText':
-                        self.gui.setMainAnswerText(data[1])
-                    elif data[0] == 'setMainQuestionText':
-                        self.gui.setMainQuestionText(data[1])
-                    elif data[0] == 'setTodayWeather':
-                        self.gui.setTodayWeather(data[1])
-                    elif data[0] == 'setTomorrowWeather':
-                        self.gui.setTomorrowWeather(data[1])
-                    elif data[0] == 'setAfterTomorrowWeather':
-                        self.gui.setAfterTomorrowWeather(data[1])
+                    if '\r' in data:
+                        sp = data.split('\r')
+                        for data in sp:
+                            data = data.split('\t')
+                            if len(data) == 1:
+                                data.append(' ')
+                            if data[0] == 'setMainAnswerText':
+                                self.gui.setMainAnswerText(data[1])
+                            elif data[0] == 'setMainQuestionText':
+                                self.gui.setMainQuestionText(data[1])
+                            elif data[0] == 'setTodayWeather':
+                                self.gui.setTodayWeather(data[1])
+                            elif data[0] == 'setTomorrowWeather':
+                                self.gui.setTomorrowWeather(data[1])
+                            elif data[0] == 'setAfterTomorrowWeather':
+                                self.gui.setAfterTomorrowWeather(data[1])
+                            time.sleep(0.05)
                 except Exception as e:
                     print("클라이언트 종료")
                     client_socket.close()

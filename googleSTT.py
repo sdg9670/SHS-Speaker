@@ -122,6 +122,7 @@ class GoogleSTT(Thread):
         Thread.__init__(self)
         self._buff = queue.Queue()
         self.client = speech.SpeechClient()
+        self.mic = None
         config = speech.types.RecognitionConfig(
             encoding=speech.enums.RecognitionConfig.AudioEncoding.LINEAR16,
             sample_rate_hertz=SAMPLE_RATE,
@@ -132,7 +133,6 @@ class GoogleSTT(Thread):
             config=config,
             interim_results=True)
         self.mic_manager = ResumableMicrophoneStream(SAMPLE_RATE, CHUNK_SIZE)
-        self.mic = None
         self.status = True
         self.daemon = True
         self.start()
@@ -166,7 +166,9 @@ class GoogleSTT(Thread):
         if self.mic is not None:
             self.mic.restart()
 
-    def getText(self, block = True):
+    def getText(self, block = False):
+        if self._buff.empty():
+            return None
         return self._buff.get(block=block)
 
     def listen_print_loop(self, responses, stream):
